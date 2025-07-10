@@ -11,8 +11,25 @@ nav{
 }
 
 nav .mobile{
+    display: none;
 
 }
+nav .mobile .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+
+}
+
+nav .mobile .header .more button{
+    border: none;
+    background-color: red;
+    padding: 15px;
+    cursor: pointer;
+
+}
+
 
 nav .logo{
     min-width: 250px;
@@ -27,6 +44,51 @@ nav a{
 
 nav a:hover{
     color: black;
-    background-color: #00c3ff
-    ;
+    background-color: #00c3ff;
+}
+
+nav .desktop{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px;
+}
+
+nav .desktop .primary,
+nav .desktop .secondary {
+    display: flex;
+}
+
+nav .desktop .secondary.mini{
+    display: none;
+}
+
+@media screen and (max-width: 853px){
+    nav .logo{
+        min-width: 100px
+    }
+    nav .secondary.full{
+        display:none;
+    }
+    nav .secondary.mini{
+        display: block !important;
+    }
+    nav .secondary.mini .submenu{
+        background-color: black;
+        position: absolute;
+        display: none;
+        width: 200px;
+        right: 0;
+    }
+    nav .secondary.mini:hover .submenu{
+        display: block;
+}}
+
+@media screen and (max-width: 500px){
+    nav .desktop{
+    display: none;
+    }
+    nav .mobile {
+        display: block;
+    }
 }
