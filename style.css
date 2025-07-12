@@ -22,9 +22,16 @@ nav .mobile .header {
 
 }
 
+.collapsed{
+
+    display: none;
+
+}
+
 nav .mobile .header .more button{
     border: none;
-    background-color: red;
+    background-color: black;
+    color: white;
     padding: 15px;
     cursor: pointer;
 
